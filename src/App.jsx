@@ -3,6 +3,19 @@ import axios from "axios";
 function App() {
   const [file, setFile] = useState(null);
   const [files, setFiles] = useState([]);
+  useEffect(() => {
+    const fetchFiles = async () => {
+      try {
+        const response = await axios.get(
+          "https://multer-file-upload-ydn1.onrender.com/files"
+        );
+        setFiles(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchFiles();
+  }, []);
 
   const handleUpload = async (e) => {
     e.preventDefault();
