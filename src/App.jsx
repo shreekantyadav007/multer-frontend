@@ -11,7 +11,7 @@ function App() {
 
     try {
       await axios.post(
-        "http://multer-file-upload-ydn1.onrender.com/upload",
+        "https://multer-file-upload-ydn1.onrender.com/upload",
         formData,
 
         {
