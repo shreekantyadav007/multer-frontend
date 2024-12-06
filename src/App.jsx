@@ -15,7 +15,7 @@ function App() {
       }
     };
     fetchFiles();
-  }, [files]);
+  }, [file]);
 
   const handleUpload = async (e) => {
     e.preventDefault();
