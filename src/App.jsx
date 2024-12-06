@@ -39,6 +39,7 @@ function App() {
       console.error("Error uploading file:", err);
     }
   };
+  const hostPath = 'https://multer-file-upload-ydn1.onrender.com/uploads/';
   return (
     <>
       <div className="App">
@@ -53,7 +54,7 @@ function App() {
             files.map((file, index) => (
               <li key={index}>
                 <strong>
-                  <a href="https://multer-file-upload-ydn1.onrender.com/uploads/{file.filename}" target="_blank">
+                  <a  href={hostPath+file.filename} target="_blank">
                   {file.filename} -{" "}
                   {new Date(file.uploadDate).toLocaleDateString()}
                   </a>
