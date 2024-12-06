@@ -53,8 +53,10 @@ function App() {
             files.map((file, index) => (
               <li key={index}>
                 <strong>
+                  <a href="https://multer-file-upload-ydn1.onrender.com/uploads/{file.filename}" target="_blank">
                   {file.filename} -{" "}
                   {new Date(file.uploadDate).toLocaleDateString()}
+                  </a>
                 </strong>
               </li>
             ))}
